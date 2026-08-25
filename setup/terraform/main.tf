@@ -198,7 +198,7 @@ resource "aws_eks_node_group" "main" {
   node_role_arn   = aws_iam_role.node_group.arn
   subnet_ids      = [var.enable_private == true ? aws_subnet.private_subnet.id : aws_subnet.public_subnet.id]
   release_version = nonsensitive(data.aws_ssm_parameter.eks_ami_release_version.value)
-  instance_types  = ["t3.medium"]
+  instance_types  = ["t3.small"]
 
   scaling_config {
     desired_size = 1
@@ -275,7 +275,7 @@ resource "aws_codebuild_project" "codebuild" {
 
   source {
     type            = "GITHUB"
-    location        = "https://github.com/your-org/your-repo"
+    location        = "https://github.com/MAHAKAAL-vk/Movie_picture_pipeline-VK"
     git_clone_depth = 1
     buildspec       = "buildspec.yml"
   }
@@ -319,4 +319,4 @@ resource "aws_iam_user" "github_action_user" {
 resource "aws_iam_user_policy_attachment" "github_action_admin" {
   user       = "github-action-user"
   policy_arn = "arn:aws:iam::aws:policy/AdministratorAccess"
-}
+}   

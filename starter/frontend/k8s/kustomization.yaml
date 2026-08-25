@@ -6,5 +6,5 @@ resources:
 namespace: default
 images:
 - name: frontend
-  newName: http://localhost
-  newTag: 3000:latest
+  newName: 203835778039.dkr.ecr.us-east-1.amazonaws.com/frontend
+  newTag: frontend
