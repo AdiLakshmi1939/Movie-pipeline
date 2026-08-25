@@ -316,7 +316,7 @@ resource "aws_iam_user" "github_action_user" {
   name = "github-action-user"
 }
 
-resource "aws_iam_policy_attachment" "github-action-user" {
-  urn = ""
-  urn = ""
+resource "aws_iam_user_policy_attachment" "github_action_admin" {
+  user       = "github-action-user"
+  policy_arn = "arn:aws:iam::aws:policy/AdministratorAccess"
 }
