@@ -319,4 +319,5 @@ resource "aws_iam_user" "github_action_user" {
 resource "aws_iam_user_policy_attachment" "github_action_admin" {
   user       = "github-action-user"
   policy_arn = "arn:aws:iam::aws:policy/AdministratorAccess"
+  policy_arn = "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryPowerUser"
 }   
