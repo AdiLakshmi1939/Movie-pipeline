@@ -410,9 +410,3 @@ kustomize build | kubectl apply -f -
 ## License
 
 [License](LICENSE.md)
-
-
-# Submission
-** Links:
-** *Frontend-Link:* http://a5257f1431ccb44599df69ab6d5f1c36-540249550.us-east-1.elb.amazonaws.com
-** *Backend-Link:* http://a5af01cb94f064ecc9a4704deb5372b7-1836437131.us-east-1.elb.amazonaws.com/movies
